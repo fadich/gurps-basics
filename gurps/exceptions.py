@@ -1,0 +1,3 @@
+
+class GurpsError(Exception):
+    pass
