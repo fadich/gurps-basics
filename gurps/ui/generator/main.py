@@ -95,7 +95,10 @@ class Application:
             command=self.save_as
         )
 
-        self.help_menu.add_command(label='О программе')
+        self.help_menu.add_command(
+            label='О программе',
+            command=self.about
+        )
 
         self.main_menu.add_cascade(
             label='Файл',
@@ -118,11 +121,11 @@ class Application:
         self.character_list = CharacterList()
 
         self.prev_btn = tk.Button(
-            text='Назад',
+            text='<< Назад',
             command=self.previous
         )
         self.next_btn = tk.Button(
-            text='Вперед',
+            text='Вперед >>',
             command=self.next
         )
         self.generate_btn = tk.Button(
@@ -216,6 +219,17 @@ class Application:
         self._update_current_character()
 
     def delete(self):
+        char_name = self.character_list.get_current_character()[0]
+        answer = messagebox.askyesno(
+            title='Удалить персонажа',
+            message=(
+                f'Удалить персонажа "{char_name}"?'
+            )
+        )
+
+        if not answer:
+            return
+
         self.character_list.delete()
         self._update_current_character()
         self.saved = False
@@ -313,6 +327,16 @@ class Application:
                 return
 
         self.root.destroy()
+
+    def about(self):
+        messagebox.showinfo(
+            title='О программе',
+            message=(
+                'Версия сборки: 1.0.0\n\n'
+                'Жалобы и предложения по улучшению: '
+                'https://github.com/fadich/gurps-basics/issues'
+            )
+        )
 
     def _update_buttons_state(self):
         if self.character_list.pointer <= 0:

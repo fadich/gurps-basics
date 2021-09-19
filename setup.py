@@ -10,7 +10,7 @@ def read(filename):
 
 setup(
     name='gurps',
-    version='0.1.0',
+    version='1.0.0',
     keywords=['gurps', 'gurps-basics', 'gurps_basics', ],
     url='https://github.com/fadich/gurps-basics',
     author='Fadi A.',
