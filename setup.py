@@ -19,6 +19,5 @@ setup(
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
     packages=find_packages(),
-    requires=[
-    ],
+    install_requires=read('requirements.txt').split(),
 )

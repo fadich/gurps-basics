@@ -16,7 +16,7 @@ class CharacterGenerator:
     NAMES = [
         'Ренди (М)',
         'Джонатан (М)',
-        'Арни(М)',
+        'Арни (М)',
         'Игри (Ж)',
         'Терра (Ж)',
         'Элин (Ж)',
@@ -129,7 +129,6 @@ class CharacterGenerator:
         self.max_behaviors = max_behaviors
         self.max_features = max_features
         self.max_skills = max_skills
-
 
     def generate(self):
         return Character(

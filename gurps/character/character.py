@@ -56,16 +56,16 @@ class Character:
 
     def __str__(self):
         return (
-            f'{self.name}\n'  # TODO: add points calculator[XYZ]\n'
-            f'\t{self.notes}\n'
+            f'{self.name}\n\n'  # TODO: add points calculator[XYZ]\n'
+            f'\t{self.notes}\n\n'
             f'ST: {self.st} \t\t FP: {self.fp}\n'
             f'DX: {self.dx} \t\t Will: {self.will}\n'
             f'IQ: {self.iq} \t\t Per: {self.perception}\n'
             f'HT: {self.ht} \t\t HP: {self.hp}\n'
             f'Basic Speed: {self.basic_speed}\n'
             f'Basic Move: {self.basic_move}\n\n'
-            f'Advantages // Disadvantages:\n'
+            f'Преимущества // Недостатки:\n'
             '\t' + '\n\t'.join(map(str, self.features)) + '\n\n'
-            'Skills:\n'
-            '\t' + '\n\t'.join(map(str, self.skills))
+            'Умения:\n'
+            '\t' + '\n\t'.join(map(str, self.skills)) + '\n'
         )
