@@ -25,7 +25,7 @@ sudo apt-get install python3.9 python3-pip python3.9-tk
 
 Install Python-module from Github 
 ```shell
-pip install git+https://github.com/fadich/gurps-basics.git
+pip3 install git+https://github.com/fadich/gurps-basics.git
 ```
 
 ## Build
