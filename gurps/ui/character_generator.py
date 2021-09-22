@@ -110,9 +110,9 @@ class Application:
         )
 
         self.root.config(menu=self.main_menu)
-        self.root.geometry('900x600')
+        self.root.geometry('940x620')
         self.root.minsize(900, 600)
-        self.root.resizable(width=False, height=False)
+        # self.root.resizable(width=False, height=False)
         self.root.option_add('*Font', 'aerial 12')
         self.root.protocol('WM_DELETE_WINDOW', self.on_close)
 
@@ -332,7 +332,7 @@ class Application:
         messagebox.showinfo(
             title='О программе',
             message=(
-                'Версия сборки: 1.0.0\n\n'
+                'Версия сборки: 1.1.0\n\n'
                 'Жалобы и предложения по улучшению: '
                 'https://github.com/fadich/gurps-basics/issues'
             )

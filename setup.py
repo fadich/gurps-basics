@@ -10,7 +10,7 @@ def read(filename):
 
 setup(
     name='gurps',
-    version='1.0.0',
+    version='1.1.0',
     keywords=['gurps', 'gurps-basics', 'gurps_basics', ],
     url='https://github.com/fadich/gurps-basics',
     author='Fadi A.',
@@ -20,4 +20,9 @@ setup(
     long_description_content_type='text/markdown',
     packages=find_packages(),
     install_requires=read('requirements.txt').split(),
+    entry_points={
+        'console_scripts': [
+            'gurps-character-generator=gurps.ui.character_generator:main',
+        ]
+    },
 )
